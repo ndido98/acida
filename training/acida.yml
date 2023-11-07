@@ -1,0 +1,227 @@
+seed: 42
+
+datasets:
+  - name: differential-idiap-feret-bonafide
+    path: C:\repos\datasets\IdiapCouples\IDIAP FERET\Attempt_Idiap_facemorpher
+    loader:
+      name: DifferentialIdiapLoader
+      args:
+        bona_fide_root: C:\repos\datasets\Feret
+        morph_couple_type: none
+    split: &training-split
+      train: 0.9
+      val: 0.1
+      test: 0
+  - name: differential-idiap-feret-facemorpher
+    path: C:\repos\datasets\IdiapCouples\IDIAP FERET\Attempt_Idiap_facemorpher
+    loader:
+      name: DifferentialIdiapLoader
+      args:
+        bona_fide_root: C:\repos\datasets\Feret
+        morphed_root: C:\repos\datasets\IdiapMorphed\FERET-Morphs\feret\morph_facemorpher
+        morph_couple_type: both
+        load_bona_fide_couples: false
+    split: *training-split
+  - name: differential-idiap-feret-opencv
+    path: C:\repos\datasets\IdiapCouples\IDIAP FERET\Attempt_Idiap_opencv
+    loader:
+      name: DifferentialIdiapLoader
+      args:
+        bona_fide_root: C:\repos\datasets\Feret
+        morphed_root: C:\repos\datasets\IdiapMorphed\FERET-Morphs\feret\morph_opencv
+        morph_couple_type: both
+        load_bona_fide_couples: false
+    split: *training-split
+  - name: differential-idiap-feret-stylegan
+    path: C:\repos\datasets\IdiapCouples\IDIAP FERET\Attempt_Idiap_stylegan
+    loader:
+      name: DifferentialIdiapLoader
+      args:
+        bona_fide_root: C:\repos\datasets\Feret
+        morphed_root: C:\repos\datasets\IdiapMorphed\FERET-Morphs\feret\morph_stylegan
+        morph_couple_type: both
+        load_bona_fide_couples: false
+    split: *training-split
+  - name: differential-idiap-frgc-bonafide
+    path: C:\repos\datasets\IdiapCouples\IDIAP FRGC\Attempt_Idiap_facemorpher
+    loader:
+      name: DifferentialIdiapLoader
+      args:
+        bona_fide_root: C:\repos\datasets\FRGC
+        morph_couple_type: none
+    split: *training-split
+  - name: differential-idiap-frgc-facemorpher
+    path: C:\repos\datasets\IdiapCouples\IDIAP FRGC\Attempt_Idiap_facemorpher
+    loader:
+      name: DifferentialIdiapLoader
+      args:
+        bona_fide_root: C:\repos\datasets\FRGC
+        morphed_root: C:\repos\datasets\IdiapMorphed\FRGC-Morphs\morph_facemorpher
+        morph_couple_type: both
+        load_bona_fide_couples: false
+    split: *training-split
+  - name: differential-idiap-frgc-opencv
+    path: C:\repos\datasets\IdiapCouples\IDIAP FRGC\Attempt_Idiap_opencv
+    loader:
+      name: DifferentialIdiapLoader
+      args:
+        bona_fide_root: C:\repos\datasets\FRGC
+        morphed_root: C:\repos\datasets\IdiapMorphed\FRGC-Morphs\morph_opencv
+        morph_couple_type: both
+        load_bona_fide_couples: false
+    split: *training-split
+  - name: differential-idiap-frgc-stylegan
+    path: C:\repos\datasets\IdiapCouples\IDIAP FRGC\Attempt_Idiap_stylegan
+    loader:
+      name: DifferentialIdiapLoader
+      args:
+        bona_fide_root: C:\repos\datasets\FRGC
+        morphed_root: C:\repos\datasets\IdiapMorphed\FRGC-Morphs\morph_stylegan
+        morph_couple_type: both
+        load_bona_fide_couples: false
+    split: *training-split
+  - name: differential-idiap-frll-bonafide
+    path: C:\repos\datasets\IdiapCouples\IDIAP FRLL\Attempt_Idiap_facemorpher
+    loader:
+      name: DifferentialIdiapLoader
+      args:
+        bona_fide_root: C:\repos\datasets\AMSL_FaceMorphImageDataSet
+        morph_couple_type: none
+    split: *training-split
+  - name: differential-idiap-frll-facemorpher
+    path: C:\repos\datasets\IdiapCouples\IDIAP FRLL\Attempt_Idiap_facemorpher
+    loader:
+      name: DifferentialIdiapLoader
+      args:
+        bona_fide_root: C:\repos\datasets\AMSL_FaceMorphImageDataSet
+        morphed_root: C:\repos\datasets\IdiapMorphed\FRLL-Morphs\facelab_london\morph_facemorpher
+        morph_couple_type: both
+        load_bona_fide_couples: false
+    split: *training-split
+  - name: differential-idiap-frll-opencv
+    path: C:\repos\datasets\IdiapCouples\IDIAP FRLL\Attempt_Idiap_opencv
+    loader:
+      name: DifferentialIdiapLoader
+      args:
+        bona_fide_root: C:\repos\datasets\AMSL_FaceMorphImageDataSet
+        morphed_root: C:\repos\datasets\IdiapMorphed\FRLL-Morphs\facelab_london\morph_opencv
+        morph_couple_type: both
+        load_bona_fide_couples: false
+    split: *training-split
+  - name: differential-idiap-frll-stylegan
+    path: C:\repos\datasets\IdiapCouples\IDIAP FRLL\Attempt_Idiap_stylegan
+    loader:
+      name: DifferentialIdiapLoader
+      args:
+        bona_fide_root: C:\repos\datasets\AMSL_FaceMorphImageDataSet
+        morphed_root: C:\repos\datasets\IdiapMorphed\FRLL-Morphs\facelab_london\morph_stylegan
+        morph_couple_type: both
+        load_bona_fide_couples: false
+    split: *training-split
+  - name: differential-fei-bonafide
+    path: C:\repos\datasets\FEICouples
+    loader:
+      name: DifferentialFEILoader
+      args:
+        bona_fide_root: C:\repos\datasets\FEIFaceDB
+        morph_couple_type: none
+    testing_groups:
+      - fei-criminal
+      - fei-accomplice
+    split: &testing-split
+      train: 0
+      val: 0
+      test: 1
+  - name: differential-fei-criminal
+    path: C:\repos\datasets\FEICouples
+    loader:
+      name: DifferentialFEILoader
+      args:
+        bona_fide_root: C:\repos\datasets\FEIFaceDB
+        morphed_root: C:\repos\datasets\FEIFaceMorph
+        morph_couple_type: criminal
+        load_bona_fide_couples: false
+    testing_groups:
+      - fei-criminal
+    split: *testing-split
+  - name: differential-fei-accomplice
+    path: C:\repos\datasets\FEICouples
+    loader:
+      name: DifferentialFEILoader
+      args:
+        bona_fide_root: C:\repos\datasets\FEIFaceDB
+        morphed_root: C:\repos\datasets\FEIFaceMorph
+        morph_couple_type: accomplice
+        load_bona_fide_couples: false
+    testing_groups:
+      - fei-accomplice
+    split: *testing-split
+
+face_detection:
+  enabled: true
+  output_path: C:\revelio_tmp\face_detection
+  algorithm:
+    name: mtcnn_detector
+
+augmentation:
+  enabled: false
+  steps: []
+
+feature_extraction:
+  enabled: true
+  output_path: C:\revelio_tmp\feature_extraction
+  algorithms:
+    - name: magface-extractor
+      args:
+        checkpoint_path: C:\repos\d-mad-experiments\acida\magface_epoch_00025.pth
+    - name: smad-extractor
+      args:
+        state_dict: C:\repos\d-mad-experiments\acida\smad-extractor.chk
+
+preprocessing:
+  steps:
+    - uses: resize
+      args:
+        width: 299
+        height: 299
+        algorithm: cubic
+        keep_aspect_ratio: true
+        fill_mode: constant
+    - uses: to_float
+    - uses: color-space
+      args:
+        target: rgb
+    - uses: criminal-morph-probability
+      args:
+        classifier_path: C:\repos\d-mad-experiments\acida\criminal-estimator.pkl
+    - uses: accomplice-morph-probability
+      args:
+        state_dict: C:\repos\d-mad-experiments\acida\accomplice-estimator.chk
+        magface_min_file: C:\repos\d-mad-experiments\acida\magface_min.npy
+        magface_max_file: C:\repos\d-mad-experiments\acida\magface_max.npy
+        smad_min_file: C:\repos\d-mad-experiments\acida\smad_min.npy
+        smad_max_file: C:\repos\d-mad-experiments\acida\smad_max.npy
+
+experiment:
+  batch_size: 64
+  model:
+    name: acida
+    checkpoint: C:\repos\d-mad-experiments\acida\acida.pkl
+    args: {}
+  training:
+    enabled: false
+    args:
+      output_path: C:\revelio_tmp\checkpoints\acida.pkl
+  scores:
+    bona_fide: C:\repos\d-mad-experiments\acida\acida_bona_fide_{group}_{now}.txt
+    morphed: C:\repos\d-mad-experiments\acida\acida_morphed_{group}_{now}.txt
+    metrics: C:\repos\d-mad-experiments\acida\acida_metrics_{now}.json
+    files: C:\repos\d-mad-experiments\acida\acida_files_{now}.csv
+  metrics:
+    - name: equal_error_rate
+    - name: bpcer_at_apcer
+      args:
+        thresholds:
+          - 0.1
+          - 0.05
+          - 0.01

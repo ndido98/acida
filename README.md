@@ -55,3 +55,27 @@ lives = [cv.imread("live1.png"), cv.imread("live2.png")]
 # Get the predictions
 predictions = get_prediction(documents, lives, device="cuda:0")
 ```
+
+## Training
+
+1. Download and install [Revelio](https://github.com/ndido98/revelio)
+2. Clone this repository
+3. Download [the support material](https://miatbiolab.csr.unibo.it/wp-content/uploads/2023/acida-support.zip) and unpack it in the `training` directory
+4. Change the directories of each dataset in the `acida.yml` file to point to the correct directories in your file system
+5. Run Revelio using the `acida.yml` configuration file allowing the `plugins` directory
+
+> [!NOTE]
+> Training is done on the publicly available IDIAP Morph datasets, whose pairs are available [here](https://github.com/ndido98/acida/blob/master/training/IdiapCouples/).
+> Testing is done on the FEI dataset, whose pairs are released [here](https://github.com/ndido98/acida/blob/master/training/FEICouples/).
+
+## Acknowledgements
+
+When using the code from this repository, please cite the following work:
+
+```
+@article{di2023dealing,
+  title={Dealing with Subject Similarity in Differential Morphing Attack Detection},
+  author={Di Domenico, Nicol{\`o} and Borghi, Guido and Franco, Annalisa and Maltoni, Davide},
+  year={2023}
+}
+```
