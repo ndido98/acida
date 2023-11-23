@@ -66,7 +66,7 @@ predictions = get_prediction(documents, lives, device="cuda:0")
 
 > [!NOTE]
 > Training is done on the publicly available IDIAP Morph datasets, whose pairs are available [here](https://github.com/ndido98/acida/blob/master/training/IdiapCouples/).
-> Testing is done on the FEI dataset, whose pairs are released [here](https://github.com/ndido98/acida/blob/master/training/FEICouples/).
+> Testing is done on the FEI dataset, whose pairs are released [here](https://github.com/ndido98/acida/blob/master/training/FEICouples/). The FEI Morph dataset is downloadable [here](https://miatbiolab.csr.unibo.it/fei-morph-dataset/).
 
 ## Acknowledgements
 
