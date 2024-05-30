@@ -1,4 +1,4 @@
-# Dealing with Subject Similarity in Differential Morphing Attack Detection
+# Improving Accomplice Detection in the Morphing Attack
 
 This is the repository that holds the official reference implementation for the paper "Dealing with Subject Similarity in Differential Morphing Attack Detection" (Di Domenico et al., 2023, under submission).
 
@@ -73,8 +73,8 @@ predictions = get_prediction(documents, lives, device="cuda:0")
 When using the code from this repository, please cite the following work:
 
 ```
-@article{di2023dealing,
-  title={Dealing with Subject Similarity in Differential Morphing Attack Detection},
+@article{di2023improving,
+  title={Improving Accomplice Detection in the Morphing Attack},
   author={Di Domenico, Nicol{\`o} and Borghi, Guido and Franco, Annalisa and Maltoni, Davide},
   year={2023}
 }
