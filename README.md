@@ -1,6 +1,6 @@
 # Improving Accomplice Detection in the Morphing Attack
 
-This is the repository that holds the official reference implementation for the paper "Dealing with Subject Similarity in Differential Morphing Attack Detection" (Di Domenico et al., 2023, under submission).
+This is the repository that holds the official reference implementation for the paper "Improving Accomplice Detection in the Morphing Attack" (Di Domenico et al., 2023, under submission).
 
 
 ## Requirements
